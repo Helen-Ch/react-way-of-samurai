@@ -4,11 +4,12 @@
     padding: 20px;
 }
 
-.item a {
-    color: white;
+.item {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.item a.activeLink {
+.active {
     color: gold;
+    text-decoration: none;
 }
