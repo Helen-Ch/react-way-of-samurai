@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     profilePage: {
         posts: [
@@ -13,9 +15,9 @@ let state = {
                 likesCount: 20,
                 src: "https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-8-avatar-2754583_120515.png"
             },
-            ],
+        ],
+        newPostText: 'it-kamasutra.com',
     },
-
     dialogsPage: {
         dialogs: [
             {id: 1, name: "Dimych"},
@@ -36,4 +38,25 @@ let state = {
     },
 }
 
-export  default state;
+// for debug
+// window.state = state;
+
+export let addPost = () => {
+    let newPost = {
+        id: 5,
+        message: state.profilePage.newPostText,
+        likesCount: 0,
+        src: "https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-8-avatar-2754583_120515.png",
+    };
+
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export default state;
