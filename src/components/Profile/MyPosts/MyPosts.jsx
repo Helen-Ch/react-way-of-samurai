@@ -8,17 +8,13 @@ const MyPosts = (props) => {
     let newPostElement = createRef();
 
     let addPost = () => {
-        // let text = newPostElement.current.value;
-        // props.addPost(text);
-        // newPostElement.current.value = '';
-        props.addPost();
-        // props.updateNewPostText(''); // put to business logic, state.js
+        props.dispatch({type: 'ADD-POST'});
     };
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        //console.log(text);
-        props.updateNewPostText(text);
+        const action = {type: 'UPDATE-NEW-TEXT-POST', newText: text};
+        props.dispatch(action);
     }
 
     return (
