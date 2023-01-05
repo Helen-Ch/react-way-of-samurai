@@ -9,13 +9,13 @@ let store = {
                     id: 1,
                     message: "Hi!",
                     likesCount: 15,
-                    src: "https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-8-avatar-2754583_120515.png"
+                    src: "https://image.shutterstock.com/image-vector/vector-male-face-avatar-logo-260nw-426321556.jpg"
                 },
                 {
                     id: 2,
                     message: "How are you?",
                     likesCount: 20,
-                    src: "https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-8-avatar-2754583_120515.png"
+                    src: "https://image.shutterstock.com/image-vector/vector-male-face-avatar-logo-260nw-426321556.jpg"
                 },
             ],
             newPostText: 'it-kamasutra.com',
