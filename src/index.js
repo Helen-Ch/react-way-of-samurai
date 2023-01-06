@@ -6,9 +6,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {Provider} from "./StoreContext";
 
-export let rerenderEntireTree = (state) => {
-    ReactDOM.render(<App state={state} dispatch={store.dispatch.bind(store)} store={store}/>, document.getElementById('root'));
+export let rerenderEntireTree = () => {
+    ReactDOM.render(
+        <Provider store={store}>
+            <App />
+         </Provider>,
+        document.getElementById('root')
+    );
 }
 
 rerenderEntireTree(store.getState());
