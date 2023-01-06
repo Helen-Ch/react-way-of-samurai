@@ -1,4 +1,4 @@
-import React, {createRef} from 'react';
+import React from 'react';
 import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
 import MyPosts from "./MyPosts";
 import StoreContext from "../../../StoreContext";
@@ -19,7 +19,6 @@ const MyPostsContainer = () => {
 
                 return <MyPosts updateNewPostText={onPostChange}
                          addPost={addPost}
-                         posts={state.profilePage.posts}
                          posts={state.profilePage.posts}
                          newPostText={state.profilePage.newPostText}/>
             }}

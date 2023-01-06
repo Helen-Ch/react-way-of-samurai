@@ -1,5 +1,5 @@
 import * as serviceWorker from './serviceWorker';
-// import store from "./redux/store";
+
 import store from "./redux/redux-store";
 
 import React from 'react';
@@ -21,8 +21,7 @@ rerenderEntireTree(store.getState());
 
 // store.subscribe(rerenderEntireTree);
 store.subscribe(() => {
-    let state = store.getState();
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 });
 
 // If you want your app to work offline and load faster, you can change
