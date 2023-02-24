@@ -58,7 +58,7 @@ let store = {
     }
 }
 
-// for debug
+// for debug in console "state"
 // window.state = state;
 
 export default store;
