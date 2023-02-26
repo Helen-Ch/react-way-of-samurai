@@ -21,7 +21,7 @@ let initialState = {
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST: {
+        case ADD_POST:
             let newPost = {
                 id: 5,
                 message: state.newPostText,
@@ -29,16 +29,16 @@ const profileReducer = (state = initialState, action) => {
                 src: "https://image.shutterstock.com/image-vector/vector-male-face-avatar-logo-260nw-426321556.jpg",
             };
 
-            let stateCopy = {...state};
-            stateCopy.posts = [...state.posts];
-            stateCopy.posts.push(newPost);
-            stateCopy.newPostText = '';
-            return stateCopy;
-        }
+            return  {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: '',
+            };
         case  UPDATE_NEW_TEXT_POST: {
-            let stateCopy = {...state};
-            stateCopy.newPostText = action.newText;
-            return stateCopy;
+            return  {
+                ...state,
+                newPostText: action.newText,
+            };
         }
         default:
             return state;
