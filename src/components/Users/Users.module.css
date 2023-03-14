@@ -4,3 +4,7 @@
     height: 50px;
     object-fit: cover;
 }
+
+.SelectedPage {
+    font-weight: bold;
+}
