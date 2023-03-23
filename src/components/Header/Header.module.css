@@ -5,3 +5,11 @@
 .header img {
     width: 20px;
 }
+
+.LoginBlock {
+    float: right;
+}
+
+.LoginBlock a {
+    color: white;
+}
