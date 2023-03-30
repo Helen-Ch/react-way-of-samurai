@@ -12,7 +12,6 @@ const Users = (props) => {
         pages.push(i);
     }
 
-
     return <div>
         <div>
             {pages.map(p => (<span
@@ -35,19 +34,23 @@ const Users = (props) => {
                 </div>
                 <div>
                     {u.followed
-                        ? <button onClick={() => {
+                        ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                            props.toggleFollowingProgress(true, u.id);
                             followAPI.unFollow(u.id).then(response => {
-                                    if (response.resultCode === 0) {
-                                        props.unfollow(u.id)
-                                    }
-                                });
+                                if (response.resultCode === 0) {
+                                    props.unfollow(u.id)
+                                }
+                                props.toggleFollowingProgress(false, u.id);
+                            });
                         }}>Unfollow</button>
-                        : <button onClick={() => {
+                        : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                            props.toggleFollowingProgress(true, u.id);
                             followAPI.follow(u.id).then(response => {
-                                    if (response.resultCode === 0) {
-                                        props.follow(u.id)
-                                    }
-                                });
+                                if (response.resultCode === 0) {
+                                    props.follow(u.id)
+                                }
+                                props.toggleFollowingProgress(false, u.id);
+                            });
                         }}>Follow</button>
                     }
                 </div>
