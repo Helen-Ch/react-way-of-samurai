@@ -2,6 +2,10 @@
     padding: 10px;
 }
 
+.descriptionBlock img {
+    max-width: 200px;
+}
+
 .About {
     display: grid;
     gap: 20px

@@ -1,4 +1,5 @@
 import {followAPI, usersAPI} from "../api/api";
+import * as profileAPI from "./users-reducer";
 
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
@@ -82,7 +83,7 @@ export const getUsers = (currentPage, pageSize) => {
 export const follow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        followAPI.follow(userId).then(response => {
+        usersAPI.follow(userId).then(response => {
             if (response.data.resultCode === 0) {
                 dispatch(followSuccess(userId));
             }
@@ -93,7 +94,7 @@ export const follow = (userId) => {
 export const unfollow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        followAPI.unFollow(userId).then(response => {
+        usersAPI.unFollow(userId).then(response => {
             if (response.data.resultCode === 0) {
                 dispatch(unfollowSuccess(userId));
             }
