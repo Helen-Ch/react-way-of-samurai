@@ -1,3 +1,5 @@
+/* не удалять */
+
 import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 
