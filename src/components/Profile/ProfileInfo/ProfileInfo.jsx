@@ -4,6 +4,7 @@ import Preloader from "../../common/Preloader/Preloader";
 import Working from "../../../assets/images/working.jpeg";
 import LookingForAJob from "../../../assets/images/looking-for-a-job.png";
 import userPhoto from "../../../assets/images/user.png"
+import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -12,14 +13,15 @@ const ProfileInfo = (props) => {
 
     return (
         <div>
-            <div>
-                <img
-                    src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350"
-                    alt=""/>
-            </div>
+            {/*<div>*/}
+            {/*    <img*/}
+            {/*        src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350"*/}
+            {/*        alt=""/>*/}
+            {/*</div>*/}
             <div className={s.descriptionBlock}>
                 <div>{props.profile.fullName}</div>
                 <img src={props.profile.photos.large !== null ? props.profile.photos.large : userPhoto} alt=""/>
+                <ProfileStatus status={"***"}/>
                 <div className={s.About}>{props.profile.aboutMe}
                     <img src={props.profile.lookingForAJob ? LookingForAJob : Working} alt=""/>
                     {props.profile.lookingForAJobDescription && <span>{props.profile.lookingForAJobDescription}</span>}
