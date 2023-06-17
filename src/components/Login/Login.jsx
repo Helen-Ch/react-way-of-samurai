@@ -34,7 +34,7 @@ const Login = (props) => {
         // props.login comes from connect mapDispatchToProp
         props.login(formData.email, formData.password, formData.rememberMe);
     }
-console.log(props);
+
     if (props.isAuth) {
         return <Navigate to={"/profile"}/>
     }
