@@ -30,7 +30,7 @@ const LoginReduxForm = reduxForm({form: "login"})(LoginForm)
 
 const Login = (props) => {
     const onSubmit = (formData) => {
-        console.log(formData);
+       // console.log(formData);
         // props.login comes from connect mapDispatchToProp
         props.login(formData.email, formData.password, formData.rememberMe);
     }
