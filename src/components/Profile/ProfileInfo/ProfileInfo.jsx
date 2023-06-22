@@ -5,6 +5,7 @@ import Working from "../../../assets/images/working.jpeg";
 import LookingForAJob from "../../../assets/images/looking-for-a-job.png";
 import userPhoto from "../../../assets/images/user.png"
 import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -21,7 +22,7 @@ const ProfileInfo = (props) => {
             <div className={s.descriptionBlock}>
                 <div>{props.profile.fullName}</div>
                 <img src={props.profile.photos.large !== null ? props.profile.photos.large : userPhoto} alt=""/>
-                <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
                 <div className={s.About}>{props.profile.aboutMe}
                     <img src={props.profile.lookingForAJob ? LookingForAJob : Working} alt=""/>
                     {props.profile.lookingForAJobDescription && <span>{props.profile.lookingForAJobDescription}</span>}
