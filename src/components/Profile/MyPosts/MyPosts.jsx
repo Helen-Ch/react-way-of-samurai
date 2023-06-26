@@ -1,4 +1,4 @@
-import React, {createRef} from 'react';
+import React from 'react';
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
 import {Field, reduxForm} from "redux-form";
@@ -27,7 +27,7 @@ const AddNewPostForm = (props) => {
 
 const AddNewPostReduxForm = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm);
 
-const MyPosts = (props) => {
+function MyPosts(props: {}) {
     let postsElements = props.posts.map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount}
                                                    src={p.src}/>);
 
