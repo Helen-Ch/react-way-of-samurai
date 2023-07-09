@@ -1,4 +1,3 @@
-import s from "./ProfileInfo.module.css";
 import React, {useEffect, useState} from "react";
 
 function ProfileStatusWithHooks(props) {
