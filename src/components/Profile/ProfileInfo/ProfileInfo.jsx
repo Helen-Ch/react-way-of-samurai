@@ -4,11 +4,10 @@ import Preloader from "../../common/Preloader/Preloader";
 import Working from "../../../assets/images/working.jpeg";
 import LookingForAJob from "../../../assets/images/looking-for-a-job.png";
 import userPhoto from "../../../assets/images/user.png"
-import ProfileStatus from "./ProfileStatus";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = (props) => {
-    if (!props.profile) {
+const ProfileInfo = ({profile, status, updateStatus}) => {
+    if (!profile) {
         return <Preloader/>
     }
 
@@ -20,12 +19,12 @@ const ProfileInfo = (props) => {
             {/*        alt=""/>*/}
             {/*</div>*/}
             <div className={s.descriptionBlock}>
-                <div>{props.profile.fullName}</div>
-                <img src={props.profile.photos.large !== null ? props.profile.photos.large : userPhoto} alt=""/>
-                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
-                <div className={s.About}>{props.profile.aboutMe}
-                    <img src={props.profile.lookingForAJob ? LookingForAJob : Working} alt=""/>
-                    {props.profile.lookingForAJobDescription && <span>{props.profile.lookingForAJobDescription}</span>}
+                <div>{profile.fullName}</div>
+                <img src={profile.photos.large !== null ? profile.photos.large : userPhoto} alt=""/>
+                <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
+                <div className={s.About}>{profile.aboutMe}
+                    <img src={profile.lookingForAJob ? LookingForAJob : Working} alt=""/>
+                    {profile.lookingForAJobDescription && <span>{profile.lookingForAJobDescription}</span>}
                 </div>
             </div>
         </div>)

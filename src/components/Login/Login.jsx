@@ -1,22 +1,21 @@
 import React from "react";
 // import {Form, Field} from "react-final-form";
 import {Field, reduxForm} from "redux-form";
-import {Input} from "../common/FormsControls/FormsControls";
+import {createField, Input} from "../common/FormsControls/FormsControls";
 import {required} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Navigate} from "react-router-dom";
 
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
     return (
         <div>
-            <form onSubmit={props.handleSubmit}>
-                <div><Field placeholder={"Login"} name={"email"} component={Input} validate={[required]}/></div>
-                <div><Field placeholder={"Password"} name={"password"} component={Input} validate={[required]}
-                            type={"password"}/></div>
-                <div><label><Field component={Input} name={"rememberMe"} type="checkbox"/>remember me</label></div>
-                {props.error && <div>{props.error}</div>}
+            <form onSubmit={handleSubmit}>
+                {createField("Email", "email", [required], Input)}
+                {createField("Password", "password", [required], Input, {type: "password"})}
+                {createField(null, "rememberMe", [], Input, {type: "checkbox"}, "remember me")}
+                {error && <div>{error}</div>}
                 <div>
                     <button>Login</button>
                 </div>
@@ -28,14 +27,14 @@ const LoginForm = (props) => {
 
 const LoginReduxForm = reduxForm({form: "login"})(LoginForm)
 
-const Login = (props) => {
+const Login = ({login, isAuth}) => {
     const onSubmit = (formData) => {
-       // console.log(formData);
+        // console.log(formData);
         // props.login comes from connect mapDispatchToProp
-        props.login(formData.email, formData.password, formData.rememberMe);
+        login(formData.email, formData.password, formData.rememberMe);
     }
 
-    if (props.isAuth) {
+    if (isAuth) {
         return <Navigate to={"/profile"}/>
     }
 
