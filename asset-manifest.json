@@ -1,33 +1,33 @@
 {
   "files": {
     "main.css": "/react-way-of-samurai/static/css/main.a2dac1f8.chunk.css",
-    "main.js": "/react-way-of-samurai/static/js/main.89b88a5f.chunk.js",
-    "main.js.map": "/react-way-of-samurai/static/js/main.89b88a5f.chunk.js.map",
-    "runtime-main.js": "/react-way-of-samurai/static/js/runtime-main.f223fa97.js",
-    "runtime-main.js.map": "/react-way-of-samurai/static/js/runtime-main.f223fa97.js.map",
-    "static/js/2.78d81f16.chunk.js": "/react-way-of-samurai/static/js/2.78d81f16.chunk.js",
-    "static/js/2.78d81f16.chunk.js.map": "/react-way-of-samurai/static/js/2.78d81f16.chunk.js.map",
+    "main.js": "/react-way-of-samurai/static/js/main.92e158ac.chunk.js",
+    "main.js.map": "/react-way-of-samurai/static/js/main.92e158ac.chunk.js.map",
+    "runtime-main.js": "/react-way-of-samurai/static/js/runtime-main.c30980ce.js",
+    "runtime-main.js.map": "/react-way-of-samurai/static/js/runtime-main.c30980ce.js.map",
+    "static/js/2.062289f4.chunk.js": "/react-way-of-samurai/static/js/2.062289f4.chunk.js",
+    "static/js/2.062289f4.chunk.js.map": "/react-way-of-samurai/static/js/2.062289f4.chunk.js.map",
     "static/css/3.bd2e3ea0.chunk.css": "/react-way-of-samurai/static/css/3.bd2e3ea0.chunk.css",
     "static/js/3.4aa7eca2.chunk.js": "/react-way-of-samurai/static/js/3.4aa7eca2.chunk.js",
     "static/js/3.4aa7eca2.chunk.js.map": "/react-way-of-samurai/static/js/3.4aa7eca2.chunk.js.map",
     "static/css/4.2f3abd74.chunk.css": "/react-way-of-samurai/static/css/4.2f3abd74.chunk.css",
-    "static/js/4.64a599fb.chunk.js": "/react-way-of-samurai/static/js/4.64a599fb.chunk.js",
-    "static/js/4.64a599fb.chunk.js.map": "/react-way-of-samurai/static/js/4.64a599fb.chunk.js.map",
+    "static/js/4.184caf3d.chunk.js": "/react-way-of-samurai/static/js/4.184caf3d.chunk.js",
+    "static/js/4.184caf3d.chunk.js.map": "/react-way-of-samurai/static/js/4.184caf3d.chunk.js.map",
     "index.html": "/react-way-of-samurai/index.html",
-    "precache-manifest.d6e5d69d98bd6178bd4704be9a850fa3.js": "/react-way-of-samurai/precache-manifest.d6e5d69d98bd6178bd4704be9a850fa3.js",
+    "precache-manifest.7c693ecfbb6ef4bf61f0b0bc7a737ac1.js": "/react-way-of-samurai/precache-manifest.7c693ecfbb6ef4bf61f0b0bc7a737ac1.js",
     "service-worker.js": "/react-way-of-samurai/service-worker.js",
     "static/css/3.bd2e3ea0.chunk.css.map": "/react-way-of-samurai/static/css/3.bd2e3ea0.chunk.css.map",
     "static/css/4.2f3abd74.chunk.css.map": "/react-way-of-samurai/static/css/4.2f3abd74.chunk.css.map",
     "static/css/main.a2dac1f8.chunk.css.map": "/react-way-of-samurai/static/css/main.a2dac1f8.chunk.css.map",
-    "static/js/2.78d81f16.chunk.js.LICENSE.txt": "/react-way-of-samurai/static/js/2.78d81f16.chunk.js.LICENSE.txt",
-    "static/js/main.89b88a5f.chunk.js.LICENSE.txt": "/react-way-of-samurai/static/js/main.89b88a5f.chunk.js.LICENSE.txt",
+    "static/js/2.062289f4.chunk.js.LICENSE.txt": "/react-way-of-samurai/static/js/2.062289f4.chunk.js.LICENSE.txt",
+    "static/js/main.92e158ac.chunk.js.LICENSE.txt": "/react-way-of-samurai/static/js/main.92e158ac.chunk.js.LICENSE.txt",
     "static/media/loader.svg": "/react-way-of-samurai/static/media/loader.89fe4bcb.svg",
     "static/media/user.png": "/react-way-of-samurai/static/media/user.7861dadc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f223fa97.js",
-    "static/js/2.78d81f16.chunk.js",
+    "static/js/runtime-main.c30980ce.js",
+    "static/js/2.062289f4.chunk.js",
     "static/css/main.a2dac1f8.chunk.css",
-    "static/js/main.89b88a5f.chunk.js"
+    "static/js/main.92e158ac.chunk.js"
   ]
 }

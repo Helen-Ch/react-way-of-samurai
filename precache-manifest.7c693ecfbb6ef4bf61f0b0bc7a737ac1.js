@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e501bd1df489fcf105f82b6e3a9581bc",
+    "revision": "00c8226456b83f83bada40dfd9f8aed8",
     "url": "/react-way-of-samurai/index.html"
   },
   {
@@ -8,40 +8,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-way-of-samurai/static/css/3.bd2e3ea0.chunk.css"
   },
   {
-    "revision": "e5919ac14f042e405169",
+    "revision": "743cd21a3f234c1804f8",
     "url": "/react-way-of-samurai/static/css/4.2f3abd74.chunk.css"
   },
   {
-    "revision": "5035c0de9db4f2536df6",
+    "revision": "f80ef366273c817fec8d",
     "url": "/react-way-of-samurai/static/css/main.a2dac1f8.chunk.css"
   },
   {
-    "revision": "991f4152cb7ece75a8b0",
-    "url": "/react-way-of-samurai/static/js/2.78d81f16.chunk.js"
+    "revision": "2a3fe1b469f8cd40c80c",
+    "url": "/react-way-of-samurai/static/js/2.062289f4.chunk.js"
   },
   {
     "revision": "48a1c4ae8665d4eb1a4f7ffa1018d251",
-    "url": "/react-way-of-samurai/static/js/2.78d81f16.chunk.js.LICENSE.txt"
+    "url": "/react-way-of-samurai/static/js/2.062289f4.chunk.js.LICENSE.txt"
   },
   {
     "revision": "16ca13895b8485d6ecc2",
     "url": "/react-way-of-samurai/static/js/3.4aa7eca2.chunk.js"
   },
   {
-    "revision": "e5919ac14f042e405169",
-    "url": "/react-way-of-samurai/static/js/4.64a599fb.chunk.js"
+    "revision": "743cd21a3f234c1804f8",
+    "url": "/react-way-of-samurai/static/js/4.184caf3d.chunk.js"
   },
   {
-    "revision": "5035c0de9db4f2536df6",
-    "url": "/react-way-of-samurai/static/js/main.89b88a5f.chunk.js"
+    "revision": "f80ef366273c817fec8d",
+    "url": "/react-way-of-samurai/static/js/main.92e158ac.chunk.js"
   },
   {
     "revision": "4e0e34f265fae8f33b01b27ae29d9d6f",
-    "url": "/react-way-of-samurai/static/js/main.89b88a5f.chunk.js.LICENSE.txt"
+    "url": "/react-way-of-samurai/static/js/main.92e158ac.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "607b4471aef604c01d8e",
-    "url": "/react-way-of-samurai/static/js/runtime-main.f223fa97.js"
+    "revision": "55cb0fc28d70e5777588",
+    "url": "/react-way-of-samurai/static/js/runtime-main.c30980ce.js"
   },
   {
     "revision": "89fe4bcba4aa7c22aae0c022f48c6cc1",
