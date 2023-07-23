@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import store from "./redux/redux-store";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import News from "./components/News/News";
@@ -62,9 +62,9 @@ const mapStateToProps = (state) => ({
 let AppContainer = connect(mapStateToProps, {initializeApp})(App);
 
 export const SamuraiJSApp = (props) => {
-    return <BrowserRouter>
-        <Provider store={store}>
+    return <HashRouter>
+        <Provider store={store} basename={process.env.PUBLIC_URL}>
             <AppContainer/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
