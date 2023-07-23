@@ -6,9 +6,15 @@ import LookingForAJob from "../../../assets/images/looking-for-a-job.png";
 import userPhoto from "../../../assets/images/user.png"
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({isOwner, profile, status, updateStatus, savePhoto}) => {
     if (!profile) {
         return <Preloader/>
+    }
+
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            savePhoto(e.target.files[0])
+        }
     }
 
     return (
@@ -20,7 +26,8 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
             {/*</div>*/}
             <div className={s.descriptionBlock}>
                 <div>{profile.fullName}</div>
-                <img src={profile.photos.large !== null ? profile.photos.large : userPhoto} alt=""/>
+                <img src={profile.photos.large || userPhoto} alt=""/>
+                {isOwner && <div><input type="file" onChange={onMainPhotoSelected}/></div>}
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
                 <div className={s.About}>{profile.aboutMe}
                     <img src={profile.lookingForAJob ? LookingForAJob : Working} alt=""/>
