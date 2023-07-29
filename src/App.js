@@ -1,6 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 import store from "./redux/redux-store";
-import {BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
+// HashRouter - для gh-pages
+import {BrowserRouter, Routes, Route, HashRouter, Navigate} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import News from "./components/News/News";
@@ -19,8 +20,17 @@ const DialogsContainer = lazy(() => import('./components/Dialogs/DialogsContaine
 const ProfileContainer = lazy(() => import('./components/Profile/ProfileContainer'));
 
 class App extends React.Component {
+    catchAllUnhandledErrors = (promiseRejectionEvent) => {
+        // alert('Some error occurred');
+        console.error(promiseRejectionEvent);
+    }
     componentDidMount() {
         this.props.initializeApp();
+        window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors);
     }
 
     render() {
@@ -34,6 +44,7 @@ class App extends React.Component {
                     <div className='app-wrapper-content'>
                         <Suspense fallback={<Preloader/>}>
                             <Routes>
+                                <Route exact path="/" element={<Navigate to="/profile"/>}/>
                                 <Route path='/dialogs/*' element={<DialogsContainer/>}/>
                                 <Route path='/profile'>
                                     <Route index element={<ProfileContainer/>}/>
@@ -45,7 +56,10 @@ class App extends React.Component {
                                 <Route path='/news' element={<News/>}/>
                                 <Route path='/music' element={<Music/>}/>
                                 <Route path='/settings' element={<Settings/>}/>
+                                {/*<Route exact path='/login' element={<Login/>}/>*/}
+                                {/*<Route path="/login/facebook" element={<div>Facebook</div>}/>*/}
                                 <Route path='/login' element={<Login/>}/>
+                                <Route path='*' element={<div>404 NOT FOUND</div>}/>
                             </Routes>
                         </Suspense>
                     </div>
@@ -62,9 +76,9 @@ const mapStateToProps = (state) => ({
 let AppContainer = connect(mapStateToProps, {initializeApp})(App);
 
 export const SamuraiJSApp = (props) => {
-    return <HashRouter>
+    return <BrowserRouter>
         <Provider store={store} basename={process.env.PUBLIC_URL}>
             <AppContainer/>
         </Provider>
-    </HashRouter>
+    </BrowserRouter>
 }
